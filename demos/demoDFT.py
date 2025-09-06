@@ -18,7 +18,7 @@ xyz = r"C:\Users\micha\BaiLabDFT\Cd68_OPT.xyz"
 
 # Fast/demo DFT parameters
 dft_cmd = [
-    "python", "DFT.py", xyz,
+    "python", "scripts/DFT.py", xyz,
     "--Lx-nm", "16", "--Ly-nm", "16", "--Lz-nm", "24",
     "--Efield-Vnm", "0.005",         # small field
     "--shells", "10",

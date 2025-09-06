@@ -93,7 +93,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--epsr-profile", type=str)
     ap.add_argument("--xyz", type=str)
-    ap.add_argument("--dft", default="DFT.py")
+    ap.add_argument("--dft", default="scripts/DFT.py")
     ap.add_argument("--dft-shells", type=int, default=6)
     ap.add_argument("--dft-E-Vnm", type=float, default=0.01)
     ap.add_argument("--Lx-nm", type=float, default=40.0)
@@ -117,7 +117,7 @@ def main():
     ap.add_argument("--nx", type=int, default=96)
     ap.add_argument("--ny", type=int, default=96)
     ap.add_argument("--nz", type=int, default=72)
-    ap.add_argument("--fea", default="FEA.py")
+    ap.add_argument("--fea", default="scripts/FEA.py")
     ap.add_argument("--workdir", default="fea_out")
 
     args = ap.parse_args()
