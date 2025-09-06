@@ -1,0 +1,6 @@
+phi_min,phi_max,0.000000e+00,2.400000e+00
+Lx_nm,Ly_nm,Lz_nm,30.000,30.000,20.000
+hbn_bot/mid/top_nm,3.000,3.000,3.000
+qd_R_nm,2.500
+epsr_shells,16.0,14.0,12.0,10.0,8.0,6.0
+centers_N,9
