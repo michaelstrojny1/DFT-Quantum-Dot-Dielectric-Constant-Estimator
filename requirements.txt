@@ -1,0 +1,5 @@
+numpy>=1.21.0
+matplotlib>=3.5.0
+ase>=3.22.0
+gpaw>=22.8.0
+scikit-fem>=8.0.0
