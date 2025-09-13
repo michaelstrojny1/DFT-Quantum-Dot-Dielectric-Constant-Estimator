@@ -1,25 +1,24 @@
-# DFT Quantum Dot Dielectric Constant Estimator
+# DFT Quantum Dot Dielectric Constant Estimator and FEA runner for Bai Lab Experiment (Quantum Dot Array Between HBN Capacitor Stack)
 
 A comprehensive simulation framework for quantum dot arrays in capacitor stacks to estimate dielectric constants via Density Functional Theory (DFT) and finite element analysis (FEA).
 
 ## Overview
 
 This project simulates the electrostatic behavior of quantum dot arrays embedded in heterostructured capacitor stacks. The workflow combines:
-- **DFT calculations** using ASE+GPAW for accurate quantum dot polarizability
+- **DFT calculations** using xTB with GFN-FF method for quantum dot polarizability
 - **Finite Element Analysis** using scikit-fem for 3D Poisson equation solving
 - **Visualization tools** for potential mapping and field analysis
 
 ## Validated Results (CdSe)
-| Dot Diameter | ε |
-|--------------|---|
-| 0.8nm        | 1.219 |
-| 0.93nm       | 1.216 |
-| 1.04nm       | 1.195 |
-| 1.26nm       | 1.157 |
-| 1.41nm       | 1.207 |
+| Dot Size (atoms) | Radius (nm) | ε |
+|------------------|-------------|---|
+| 34               | 0.8         | 1.22 |
+| 68               | 0.93        | 1.19 |
+| 102              | 1.04        | 1.18 |
+| 136              | 1.26        | 1.16 |
+| 170              | 1.41        | 1.17 |
 
 Values consistent with quantum confinement literature (J. Phys. Chem. C 2010)
-
 ## Stack Architecture
 
 The simulated heterostructure consists of (bottom to top):
@@ -33,7 +32,7 @@ The simulated heterostructure consists of (bottom to top):
 ## Core Components
 
 ### Scripts
-- **`scripts/DFT.py`** - DFT calculations using ASE+GPAW for quantum dot polarizability
+- **`scripts/DFT_xtb.py`** - DFT calculations using xTB with GFN-FF method for quantum dot polarizability
 - **`scripts/FEA.py`** - 3D Poisson solver using scikit-fem with adaptive mesh
 - **`scripts/run.py`** - Main workflow orchestrator with parameter management
 
@@ -122,11 +121,7 @@ pip install -r requirements.txt
 ```
 
 ### Optional: DFT Support
-For full DFT functionality, ensure GPAW is properly configured:
-```bash
-# Additional GPAW setup may be required depending on your system
-pip install gpaw
-```
+For full DFT functionality, ensure xTB is installed on your system. xTB is not available via pip; download from https://github.com/grimme-lab/xtb
 
 ## Output Files
 
@@ -149,7 +144,7 @@ numpy>=1.21.0      # Numerical computations
 matplotlib>=3.5.0  # Visualization
 scikit-fem>=8.0.0  # Finite element solver
 ase>=3.22.0        # Atomic simulation environment
-gpaw>=22.8.0       # DFT calculations (optional)
+# xtb              # DFT calculations (external, download from https://github.com/grimme-lab/xtb)
 ```
 
 ### Compatibility
