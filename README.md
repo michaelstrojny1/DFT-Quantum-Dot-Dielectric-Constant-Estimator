@@ -1,6 +1,6 @@
 # DFT Quantum Dot Dielectric Constant Estimator
 
-**FEA runner for Bai Lab Experiment (Top Capacitor Plate -> HBN -> 2D QD Pattern -> HBN -> Graphene -> HBN -> Bottom Plate)**
+# Includes **FEA runner for Bai Lab Experiment (Top Capacitor Plate -> HBN -> 2D QD Pattern -> HBN -> Graphene -> HBN -> Bottom Plate)**
 
 A comprehensive simulation framework for quantum dot arrays in capacitor stacks to estimate dielectric constants via Density Functional Theory (DFT) and finite element analysis (FEA).
 
