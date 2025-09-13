@@ -1,0 +1,6 @@
+cdse_fea_output/
+custom_grid_output/
+dft_results/
+__pycache__/
+*.pyc
+*.tmp
